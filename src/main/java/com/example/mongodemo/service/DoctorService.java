@@ -39,7 +39,7 @@ public class DoctorService {
     public Doctor updateSpecializations(String doctorId, List<Specialization> specializations) {
         Doctor doctor = getById(doctorId);
         doctor.setSpecializations(specializations);
-        return saveDoctor(doctor);
+        return doctorRepository.save(doctor);
     }
 
     public List<Doctor> getDoctorsBySpecializations(List<Specialization> specializations) {

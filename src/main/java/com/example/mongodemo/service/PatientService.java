@@ -45,7 +45,6 @@ public class PatientService {
         });
     }
 
-    @Transactional
     public Patient updatePatient(String patientId, String newName, String newEmail) {
         Patient patient = patientRepository.findById(patientId).orElseThrow(() -> noPatientById(patientId));
 

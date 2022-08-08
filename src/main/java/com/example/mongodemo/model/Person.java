@@ -5,7 +5,6 @@ import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.index.Indexed;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.Period;
 
 @Data
@@ -17,7 +16,7 @@ public class Person {
     private Gender gender;
     private Address address;
     private LocalDate birthDate;
-    private LocalDateTime registered;
+    private LocalDate registered;
     @Transient
     private Integer age;
 
@@ -28,7 +27,7 @@ public class Person {
         this.gender = gender;
         this.address = address;
         this.birthDate = birthDate;
-        this.registered = LocalDateTime.now();
+        this.registered = LocalDate.now();
     }
 
     public Integer getAge() {
